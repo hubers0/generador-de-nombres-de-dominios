@@ -38,17 +38,16 @@ window.onload = function() {
             " " +
             domain[b] +
             "<br>";
+          }
         }
       }
-    }
-  };
-  console.log(loopCombination);
-  window.onload = function() {
-    document.querySelector("#domain").innerHTML = generateDomain();
-    setInterval(() => {
+      console.log(loopCombination);
+    };
+    
+    window.onload = function() {
       document.querySelector("#domain").innerHTML = generateDomain();
-      generateCombinations();
-    }, 5000);
-  };
-  console.log("Hello Rigo from the console!");
-};
+      setInterval(() => {
+        document.querySelector("#domain").innerHTML = generateDomain();
+        generateCombinations();
+      }, 5000);
+    };
